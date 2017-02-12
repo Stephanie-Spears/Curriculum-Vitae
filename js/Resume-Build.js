@@ -1,37 +1,29 @@
 var bio = {
-  "name": "Stephanie Spears",
-  "role": "Developer",
+  "name": "<h1 id='name'>Stephanie Spears</h1>",
+  "role": "<span>Programmer/Web Developer</span><hr>",
   "contacts": {
-    "mobile": "503-555-5555",
-    "email": "Stephanie.Spears1@gmail.com",
-    "github": "https://github.com/Stephanie-Spears",
-    "location": "Portland"
+    "mobile": "<li class='flex-item'><span class='blue-text'>mobile</span><span class='white-text'>503-459-5555</span></li>",
+    "email": "<li class='flex-item'><span class='blue-text'>email</span><span class='white-text'>Stephanie.Spears1@gmail.com</span></li>",
+    "github": "<li class='flex-item'><span class='blue-text'>github</span><span class='white-text'>https://github.com/Stephanie-Spears</span></li>",
+    "location": "<li class='flex-item'><span class='blue-text'>location</span><span class='white-text'>Portland, Oregon</span></li>"
   },
-  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
+  "welcomeMessage": "<blockquote><p>Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.</p><footer>Pele</footer></blockquote>",
   "skills": [
     "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
   ],
-  "myBioPic": "img/bioPic.jpg"
+  "myBioPic": "<img src=img/bioPic.jpg class='biopic'>"
 };
+
+// NOTE: ACTUALLY, go back and put the HTML elements in the HTML. duh. 
 
 if (bio.length !== 0)
 {
-  var formattedName=HTMLheaderName.replace("%data%", bio.name);
-  var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
-  $("#header").prepend(formattedName, formattedRole);
-
-  var formattedMobile=HTMLmobile.replace("%data%", bio.contacts.mobile);
-  var formattedEmail=HTMLemail.replace("%data%", bio.contacts.email);
-  var formattedGithub=HTMLgithub.replace("%data%", bio.contacts.github);
-  var formattedLocation=HTMLlocation.replace("%data%", bio.contacts.location);
-  $("#topContacts").prepend(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
-
-  var formattedBioPic=HTMLbioPic.replace("%data%", bio.myBioPic);
-  var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-  $("#header").append(formattedBioPic, formattedWelcomeMessage);
+  $("#header").prepend(bio.name, bio.role);
+  $("#topContacts").prepend(bio.contacts.mobile, bio.contacts.email, bio.contacts.github, bio.contacts.location);
+  $("#header").append(bio.myBioPic, bio.welcomeMessage);
 
   if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
+    $("#header").append('<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>');
     for (var i = 0; i < bio.skills.length; i++) {
       var formattedSkill=HTMLskills.replace("%data%", bio.skills[i]);
       $("#skills").append(formattedSkill);

@@ -2,7 +2,14 @@ body,
 div,
 ul,
 li,
-p,
+p {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto Slab, sans-serif;
+}
+
+
+
 h1,
 h2,
 h3,
@@ -104,11 +111,11 @@ a {
   display: none;
 }
 
-.orange {
+.blue {
   background-color: steelblue;
 }
 
-.orange-text {
+.blue-text {
   color: steelblue;
 }
 

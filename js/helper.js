@@ -91,7 +91,7 @@ function initializeMap() {
   var locations;
 //switch to "true" if i want to disable the normal maps content, like no Street View or Zoom Control icons
   var mapOptions = {
-    disableDefaultUI: false
+    disableDefaultUI: true
   };
 
   /*

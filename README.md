@@ -24,7 +24,7 @@ _This is a web application for presenting Stephanie Spears' *web development* CV
 
 ## GitHub Pages link
 
-View this site on GitHub Pages ***[here](https://stephanie-spears.github.io/Curriculum-Vitae)***
+View this site on GitHub Pages ***[here](https://stephanie-spears.github.io/Curriculum-Vitae/)***
 
 ## Support and contact details
 

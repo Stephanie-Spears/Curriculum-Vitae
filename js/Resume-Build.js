@@ -9,37 +9,36 @@ var bio = {
   },
   "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
   "skills": [
-    "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
+    "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
   ],
   "myBioPic": "img/bioPic.jpg"
 };
 
+if (bio.length !== 0)
+{
+  var formattedName=HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
+  $("#header").prepend(formattedName, formattedRole);
 
-// if (bio.length !== 0)
-// {
-//   var formattedName=HTMLheaderName.replace("%data%", bio.name);
-//   var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
-//   $("#header").prepend(formattedName, formattedRole);
-//
-//   var formattedMobile=HTMLmobile.replace("%data%", bio.contacts.mobile);
-//   var formattedEmail=HTMLemail.replace("%data%", bio.contacts.email);
-//   var formattedGithub=HTMLgithub.replace("%data%", bio.contacts.github);
-//   var formattedLocation=HTMLlocation.replace("%data%", bio.contacts.location);
-//   $("#topContacts").prepend(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
-//
-//   var formattedBioPic=HTMLbioPic.replace("%data%", bio.myBioPic);
-//   var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-//   $("#header").append(formattedBioPic, formattedWelcomeMessage);
-//
-//   if (bio.skills.length > 0) {
-//     $("#header").append(HTMLskillsStart);
-//     for (var i = 0; i < bio.skills.length; i++) {
-//       var formattedSkill=HTMLskills.replace("%data%", bio.skills[i]);
-//       $("#skills").append(formattedSkill);
-//     }
-//   }
-//
-// }
+  var formattedMobile=HTMLmobile.replace("%data%", bio.contacts.mobile);
+  var formattedEmail=HTMLemail.replace("%data%", bio.contacts.email);
+  var formattedGithub=HTMLgithub.replace("%data%", bio.contacts.github);
+  var formattedLocation=HTMLlocation.replace("%data%", bio.contacts.location);
+  $("#topContacts").prepend(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
+
+  var formattedBioPic=HTMLbioPic.replace("%data%", bio.myBioPic);
+  var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+  $("#header").append(formattedBioPic, formattedWelcomeMessage);
+
+  if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillsStart);
+    for (var i = 0; i < bio.skills.length; i++) {
+      var formattedSkill=HTMLskills.replace("%data%", bio.skills[i]);
+      $("#skills").append(formattedSkill);
+    }
+  }
+
+}
 
 
 var education = {

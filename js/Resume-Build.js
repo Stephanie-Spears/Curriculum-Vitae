@@ -1,16 +1,15 @@
 var bio = {
   "name": "Stephanie Spears",
-  "role": "Web Developer",
+  "role": "Developer",
   "contacts": {
-    "mobile": "555-555-5555",
-    "email": "Stephanie.Spears22@gmail.com",
+    "mobile": "503-555-5555",
+    "email": "Stephanie.Spears1@gmail.com",
     "github": "https://github.com/Stephanie-Spears",
-    "twitter": "@stephaniespears",
     "location": "Portland"
   },
-  "welcomeMessage": "Welcome to my resume!",
+  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
   "skills": [
-    "PHP", ".NET", "Drupal", "HTML/CSS/JavaScript", "C++", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Strong work ethic", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
+    "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
   ],
   "myBioPic": "img/bioPic.jpg"
 };

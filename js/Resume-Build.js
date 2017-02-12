@@ -14,6 +14,7 @@ var bio = {
   "myBioPic": "img/bioPic.jpg"
 };
 
+
 // if (bio.length !== 0)
 // {
 //   var formattedName=HTMLheaderName.replace("%data%", bio.name);

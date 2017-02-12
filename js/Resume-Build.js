@@ -214,12 +214,12 @@ function inName(name) {
 }
 $("#main").append(internationalizeButton);
 
-//displays where the user clicks on webpage--inside inspect
-$(document).click(function(loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
-  logClicks(x,y);
-});
+// //displays where the user clicks on webpage--inside inspect
+// $(document).click(function(loc) {
+//   var x = loc.pageX;
+//   var y = loc.pageY;
+//   logClicks(x,y);
+// });
 
 //creates an array of all work locations
 function locationizer(work_obj) {

@@ -60,24 +60,24 @@ $(document).ready(function() {
   });
 });
 
-/*
-Function for collecting client click Locations.
-*/
-var clickLocations = [];
-
-function logClicks(x,y) {
-  clickLocations.push(
-    {
-      x: x,
-      y: y
-    }
-  );
-  console.log('x location: ' + x + '; y location: ' + y);
-}
-
-$(document).click(function(loc) {
-  // NOTE: INSERT MY CLICK LOCATION CODE HERE
-});
+// /*
+// Function for collecting client click Locations.
+// */
+// var clickLocations = [];
+//
+// function logClicks(x,y) {
+//   clickLocations.push(
+//     {
+//       x: x,
+//       y: y
+//     }
+//   );
+//   console.log('x location: ' + x + '; y location: ' + y);
+// }
+//
+// $(document).click(function(loc) {
+//   // NOTE: INSERT MY CLICK LOCATION CODE HERE
+// });
 
 
 var map;    // declares a global variable called map

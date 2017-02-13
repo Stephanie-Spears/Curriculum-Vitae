@@ -1,6 +1,6 @@
 var bio = {
   "name": "Stephanie Spears",
-  "role": "Developer",
+  "role": "Web Developer",
   "contacts": {
     "mobile": "503-555-5555",
     "email": "Stephanie.Spears1@gmail.com",

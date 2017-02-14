@@ -159,9 +159,9 @@ displayWork();
 var projects = {
   "projects": [
     {
-      "title": "project title",
-      "dates": "project dates",
-      "description": "project description",
+      "title": "Stephanie's Portfolio",
+      "dates": "February 2016-Present",
+      "description": "A web application for presenting my project portfolio",
       "images": [
       ]
     },

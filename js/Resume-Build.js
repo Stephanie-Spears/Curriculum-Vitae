@@ -162,15 +162,7 @@ var projects = {
       "title": "Stephanie's Portfolio",
       "dates": "February 2016-Present",
       "description": "A web application for presenting my project portfolio",
-      "images": [
-      ]
-    },
-    {
-      "title": "project title2",
-      "dates": "project dates2",
-      "description": "project description2",
-      "images": [
-
+      "images": [ "img/portfolio-screenshot.png"
       ]
     }
   ]

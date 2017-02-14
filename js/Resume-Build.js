@@ -160,10 +160,10 @@ var projects = {
   "projects": [
     {
       "title": "Stephanie's Portfolio",
+      // "link": "https://stephanie-spears.github.io/stephanie-spears/",
       "dates": "February 2016-Present",
       "description": "A web application for presenting my project portfolio",
-      "images": [ "img/portfolio-screenshot.png"
-      ]
+      "images": [ "img/portfolio-screenshot.png" ]
     }
   ]
 };
@@ -174,6 +174,8 @@ function displayProjects() {
       $("#projects").append(HTMLprojectStart);
 
       var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+      formattedTitle = formattedTitle.replace("#", "https://stephanie-spears.github.io/stephanie-spears/");
+
       $(".project-entry:last").append(formattedTitle);
 
       var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);

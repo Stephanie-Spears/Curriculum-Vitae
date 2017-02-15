@@ -35,7 +35,7 @@ function displayBio(){
     if (bio.languages.length > 0) {
       $("#headerLanguages").append(HTMLlanguagesStart);
       for (var x = 0; x < bio.languages.length; x++){
-        alert(bio.languages[x]);
+        // alert(bio.languages[x]);
         var formattedLanguages=HTMLlanguages.replace("%data%", bio.langauges); // NOTE: breaks if I do bio.langauges[x]...debug
         $("#langauges").append(formattedLanguages);
       }
@@ -43,7 +43,7 @@ function displayBio(){
     if (bio.skills.length > 0) {
       $("#headerSkills").append(HTMLskillsStart);
       for (var e = 0; e < bio.skills.length; e++){
-        alert(bio.skills[e]);
+        // alert(bio.skills[e]);
         var formattedSkills=HTMLskills.replace("%data%", bio.skills[e]);
         $("#skills").append(formattedSkills);
       }

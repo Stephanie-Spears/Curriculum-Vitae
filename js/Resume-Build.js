@@ -7,10 +7,12 @@ var bio = {
     "github": "https://github.com/Stephanie-Spears",
     "location": "Portland, Oregon"
   },
-  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.<footer>-Pele</footer>",
-  "skills": [
-    "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift", " ", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
-  ],
+  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
+
+  "languages": ["C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift"],
+
+  "skills": ["Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"],
+
   "myBioPic": "img/bioPic.jpg"
 };
 
@@ -30,14 +32,21 @@ if (bio.length !== 0)
   var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   $("#header").append(formattedBioPic, formattedWelcomeMessage);
 
-  if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
-    for (var i = 0; i < bio.skills.length; i++) {
-      var formattedSkill=HTMLskills.replace("%data%", bio.skills[i]);
-      $("#skills").append(formattedSkill);
+  if (bio.languages.length > 0) {
+    $("#header").append(HTMLlanguagesStart);
+    for (var x = 0; x < bio.languages.length; x++) {
+      var formattedLanguages=HTMLlanguages.replace("%data%", bio.langauges);
+      alert(bio.languages[i]);
+      $("#langauges").append(formattedLanguages);
     }
   }
-
+  if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillsStart);
+    for (var e = 0; e < bio.skills.length; e++) {
+      var formattedSkills=HTMLskills.replace("%data%", bio.skills[e]);
+      $("#skills").append(formattedSkills);
+    }
+  }
 }
 
 var education = {

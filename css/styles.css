@@ -98,9 +98,9 @@ a {
   line-height: 28px;
 }
 
+#languages-h3,
 #skills-h3 {
   color: steelblue;
-
 }
 
 .blue {
@@ -126,7 +126,10 @@ a {
   background-color: #4a4a4a;
 }
 
-#header {
+
+#header,
+#headerLanguages,
+#headerSkills {
   background-color: #484848;
 }
 
@@ -163,6 +166,7 @@ ul {
 
 img {
   padding: 10px;
+  width: 40%;
 }
 
 span {
@@ -213,6 +217,7 @@ span {
 }
 
 @media only screen and (min-width: 750px) {
+  #languages-h3,
   #skills-h3,
   .biopic {
     display: block;

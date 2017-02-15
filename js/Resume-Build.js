@@ -44,40 +44,40 @@ var education = {
   "schools": [
     {
       "name": "Epicodus",
-      "location": "Portland, Oregon",
-      "degree": "graduate",
-      "majors": ["PHP ", "Drupal ", "JavaScript "],
+      "location": "400 SW 6th Ave #800, Portland, OR 97204",
+      "degree": "--Certificate of Completion",
+      "majors": ["PHP", " Drupal ", " JavaScript"],
       "dates": "Jan 2017-July 2017",
       "url": "https://www.epicodus.com/"
     },
     {
       "name": "University of Oregon",
-      "location": "Eugene, Oregon",
-      "degree": "BA",
-      "majors": ["Psychology ", "Humanities ", "English (minor)"],
+      "location": "1585 E 13th Ave, Eugene, OR 97403",
+      "degree": "--Bachelor of Arts",
+      "majors": ["Psychology", " Humanities", " English (minor)"],
       "dates": "Sept 2009-June 2011",
       "url": "http://uoregon.edu/"
     },
     {
       "name": "Oregon State University",
-      "location": "Corvallis, Oregon",
-      "degree": "transfer",
-      "majors": ["English ", "Human Development"],
+      "location": "Corvallis, OR 97331",
+      "degree": "",
+      "majors": ["English", " Human Development"],
       "dates": "Sept 2007-Aug 2009",
       "url": "http://oregonstate.edu/"
     },
     {
       "name": "Portland State University",
-      "location": "Portland, Oregon",
-      "degree": "trasfer",
-      "majors": ["English Literature ", "Psychology"],
+      "location": "1825 SW Broadway, Portland, OR 97201",
+      "degree": "",
+      "majors": ["English Literature", " Psychology"],
       "dates": "Sept 2006-Aug 2007",
       "url": "https://www.pdx.edu/"
     },
     {
       "name": "Portland Community College",
-      "location": "Portland, Oregon",
-      "degree": "transfer",
+      "location": "12000 SW 49th Ave, Portland, OR 97219",
+      "degree": "",
       "majors": ["Computer Science"],
       "dates": "Sept 2006-Aug 2007, Feb 2016-Dec 2016",
       "url": "https://www.pdx.edu/"
@@ -87,8 +87,14 @@ var education = {
     {
       "title": "JavaScript Basics",
       "school": "Udacity",
-      "dates": "Jan 2017",
+      "dates": "Feb 2017",
       "url": "https://classroom.udacity.com/courses/ud804/lessons/1946788554/concepts/25505685350923"
+    },
+    {
+      "title": "Programming Foundations with Python",
+      "school": "Udacity",
+      "dates": "Feb 2017",
+      "url": "https://classroom.udacity.com/courses/ud036/lessons/990110642/concepts/10079185740923"
     },
     {
       "title": "Intro to Computer Science",
@@ -119,12 +125,6 @@ var education = {
       "school": "Udacity",
       "dates": "Jan 2017",
       "url": "https://classroom.udacity.com/courses/ud282/lessons/8193672240/concepts/82227937880923"
-    },
-    {
-      "title": "Programming Foundations with Python",
-      "school": "Udacity",
-      "dates": "Jan 2017",
-      "url": "https://classroom.udacity.com/courses/ud036/lessons/990110642/concepts/10079185740923"
     },
     {
       "title": "Linux Command Line Basics",
@@ -158,17 +158,13 @@ function displayEducation() {
   if (education.schools.length > 0) {
     for (var i = 0; i < education.schools.length; i++) {
       $("#education").append(HTMLschoolStart);
-      formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+      var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
       formattedSchoolName = formattedSchoolName.replace("#", education.schools[i].url);
-      $(".education-entry:last").append(formattedSchoolName);
-      formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-      $(".education-entry:last").append(formattedSchoolDegree);
-      formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-      $(".education-entry:last").append(formattedSchoolDate);
-      formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-      $(".education-entry:last").append(formattedSchoolLocation);
-      formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
-      $(".education-entry:last").append(formattedSchoolMajor);
+      var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+      var formattedSchoolDate = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+      var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+      var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
+      $(".education-entry:last").append(formattedSchoolName, formattedSchoolDegree, formattedSchoolDate, formattedSchoolLocation, formattedSchoolMajor);
     }
   }
   if (education.completedCourses.length > 0){

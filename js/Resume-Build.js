@@ -9,45 +9,49 @@ var bio = {
   },
   "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
 
-  "languages": ["C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift"],
+  "languages": ["C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift" ],
 
   "skills": ["Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"],
 
   "myBioPic": "img/bioPic.jpg"
 };
 
-if (bio.length !== 0)
-{
-  var formattedName=HTMLheaderName.replace("%data%", bio.name);
-  var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
-  $("#header").prepend(formattedName, formattedRole);
+function displayBio(){
+  if (bio.length !== 0){
+    var formattedName=HTMLheaderName.replace("%data%", bio.name);
+    var formattedRole=HTMLheaderRole.replace("%data%", bio.role);
+    $("#header").prepend(formattedName, formattedRole);
 
-  var formattedMobile=HTMLmobile.replace("%data%", bio.contacts.mobile);
-  var formattedEmail=HTMLemail.replace("%data%", bio.contacts.email);
-  var formattedGithub=HTMLgithub.replace("%data%", bio.contacts.github);
-  var formattedLocation=HTMLlocation.replace("%data%", bio.contacts.location);
-  $("#topContacts").prepend(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
+    var formattedMobile=HTMLmobile.replace("%data%", bio.contacts.mobile);
+    var formattedEmail=HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedGithub=HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedLocation=HTMLlocation.replace("%data%", bio.contacts.location);
+    $("#topContacts").prepend(formattedMobile, formattedEmail, formattedGithub, formattedLocation);
 
-  var formattedBioPic=HTMLbioPic.replace("%data%", bio.myBioPic);
-  var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-  $("#header").append(formattedBioPic, formattedWelcomeMessage);
+    var formattedBioPic=HTMLbioPic.replace("%data%", bio.myBioPic);
+    var formattedWelcomeMessage=HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formattedBioPic, formattedWelcomeMessage);
 
-  if (bio.languages.length > 0) {
-    $("#header").append(HTMLlanguagesStart);
-    for (var x = 0; x < bio.languages.length; x++) {
-      var formattedLanguages=HTMLlanguages.replace("%data%", bio.langauges);
-      alert(bio.languages[i]);
-      $("#langauges").append(formattedLanguages);
+    if (bio.languages.length > 0) {
+      $("#headerLanguages").append(HTMLlanguagesStart);
+      for (var x = 0; x < bio.languages.length; x++){
+        alert(bio.languages[x]);
+        var formattedLanguages=HTMLlanguages.replace("%data%", bio.langauges); // NOTE: breaks if I do bio.langauges[x]...debug
+        $("#langauges").append(formattedLanguages);
+      }
     }
-  }
-  if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillsStart);
-    for (var e = 0; e < bio.skills.length; e++) {
-      var formattedSkills=HTMLskills.replace("%data%", bio.skills[e]);
-      $("#skills").append(formattedSkills);
+    if (bio.skills.length > 0) {
+      $("#headerSkills").append(HTMLskillsStart);
+      for (var e = 0; e < bio.skills.length; e++){
+        alert(bio.skills[e]);
+        var formattedSkills=HTMLskills.replace("%data%", bio.skills[e]);
+        $("#skills").append(formattedSkills);
+      }
     }
   }
 }
+
+displayBio();
 
 var education = {
   "schools": [

@@ -40,14 +40,13 @@ if (bio.length !== 0)
 
 }
 
-
 var education = {
   "schools": [
     {
       "name": "Epicodus",
       "location": "Portland, Oregon",
       "degree": "graduate",
-      "majors": ["PHP", "Drupal", "JavaScript"],
+      "majors": ["PHP ", "Drupal ", "JavaScript "],
       "dates": "Jan 2017-July 2017",
       "url": "https://www.epicodus.com/"
     },
@@ -55,17 +54,84 @@ var education = {
       "name": "University of Oregon",
       "location": "Eugene, Oregon",
       "degree": "BA",
-      "majors": ["Psychology", "Humanities", "English minor"],
+      "majors": ["Psychology ", "Humanities ", "English (minor)"],
       "dates": "Sept 2009-June 2011",
       "url": "http://uoregon.edu/"
+    },
+    {
+      "name": "Oregon State University",
+      "location": "Corvallis, Oregon",
+      "degree": "transfer",
+      "majors": ["English ", "Human Development"],
+      "dates": "Sept 2007-Aug 2009",
+      "url": "http://oregonstate.edu/"
+    },
+    {
+      "name": "Portland State University",
+      "location": "Portland, Oregon",
+      "degree": "trasfer",
+      "majors": ["English Literature ", "Psychology"],
+      "dates": "Sept 2006-Aug 2007",
+      "url": "https://www.pdx.edu/"
+    },
+    {
+      "name": "Portland Community College",
+      "location": "Portland, Oregon",
+      "degree": "transfer",
+      "majors": ["Computer Science"],
+      "dates": "Sept 2006-Aug 2007, Feb 2016-Dec 2016",
+      "url": "https://www.pdx.edu/"
     }
   ],
-  "Completed Courses": [
+  "completedCourses": [
     {
       "title": "JavaScript Basics",
       "school": "Udacity",
       "dates": "Jan 2017",
       "url": "https://classroom.udacity.com/courses/ud804/lessons/1946788554/concepts/25505685350923"
+    },
+    {
+      "title": "Intro to Computer Science",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/cs101/lessons/48299949/concepts/486985440923"
+    },
+    {
+      "title": "How to Use Git and Github",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/ud775/lessons/2980038599/concepts/29607789240923"
+    },
+    {
+      "title": "Intro to HTML and CSS",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/ud304/lessons/2617868617/concepts/27713785570923"
+    },
+    {
+      "title": "Web Development",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/cs253/lessons/48756010/concepts/484037880923"
+    },
+    {
+      "title": "Intro to Java: Functional Programming",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/ud282/lessons/8193672240/concepts/82227937880923"
+    },
+    {
+      "title": "Programming Foundations with Python",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url": "https://classroom.udacity.com/courses/ud036/lessons/990110642/concepts/10079185740923"
+    },
+    {
+      "title": "Linux Command Line Basics",
+      "school": "Udacity",
+      "dates": "Jan 2017",
+      "url":
+      "https://classroom.udacity.com/courses/ud595/lessons/4597278561/concepts/46968696010923"
     },
     {
       "title": "Software Design",
@@ -93,6 +159,7 @@ function displayEducation() {
     for (var i = 0; i < education.schools.length; i++) {
       $("#education").append(HTMLschoolStart);
       formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
+      formattedSchoolName = formattedSchoolName.replace("#", education.schools[i].url);
       $(".education-entry:last").append(formattedSchoolName);
       formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
       $(".education-entry:last").append(formattedSchoolDegree);
@@ -103,6 +170,18 @@ function displayEducation() {
       formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors);
       $(".education-entry:last").append(formattedSchoolMajor);
     }
+  }
+  if (education.completedCourses.length > 0){
+    for (var e = 0; e < education.completedCourses.length; e++){
+      $("#completedCourses").append(HTMLonlineCourseStart);
+      var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.completedCourses[e].title);
+      formattedOnlineTitle = formattedOnlineTitle.replace("#", education.completedCourses[e].url);
+      var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.completedCourses[e].school);
+      var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.completedCourses[e].dates);
+      var formmattedOnlineURL = HTMLonlineURL.replace("%data%", education.completedCourses[e].url);
+      $(".onlineCourse-entry:last").append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates);
+    }
+
   }
 }
 
@@ -160,7 +239,7 @@ var projects = {
   "projects": [
     {
       "title": "Stephanie's Portfolio",
-      // "link": "https://stephanie-spears.github.io/stephanie-spears/",
+      "link" : "https://stephanie-spears.github.io/stephanie-spears/",
       "dates": "February 2016-Present",
       "description": "A web application for presenting my project portfolio",
       "images": [ "img/portfolio-screenshot.png" ]
@@ -174,7 +253,7 @@ function displayProjects() {
       $("#projects").append(HTMLprojectStart);
 
       var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
-      formattedTitle = formattedTitle.replace("#", "https://stephanie-spears.github.io/stephanie-spears/");
+      formattedTitle = formattedTitle.replace("#", projects.projects[i].link);
 
       $(".project-entry:last").append(formattedTitle);
 

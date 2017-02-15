@@ -44,7 +44,7 @@ var education = {
   "schools": [
     {
       "name": "Epicodus",
-      "location": "400 SW 6th Ave #800, Portland, OR 97204",
+      "location": "Portland, OR 97204",
       "degree": "--Certificate of Completion",
       "majors": ["PHP", " Drupal ", " JavaScript"],
       "dates": "Jan 2017-July 2017",
@@ -52,7 +52,7 @@ var education = {
     },
     {
       "name": "University of Oregon",
-      "location": "1585 E 13th Ave, Eugene, OR 97403",
+      "location": "Eugene, OR 97403",
       "degree": "--Bachelor of Arts",
       "majors": ["Psychology", " Humanities", " English (minor)"],
       "dates": "Sept 2009-June 2011",
@@ -68,7 +68,7 @@ var education = {
     },
     {
       "name": "Portland State University",
-      "location": "1825 SW Broadway, Portland, OR 97201",
+      "location": "Portland, OR 97201",
       "degree": "",
       "majors": ["English Literature", " Psychology"],
       "dates": "Sept 2006-Aug 2007",
@@ -76,7 +76,7 @@ var education = {
     },
     {
       "name": "Portland Community College",
-      "location": "12000 SW 49th Ave, Portland, OR 97219",
+      "location": "Portland, OR 97219",
       "degree": "",
       "majors": ["Computer Science"],
       "dates": "Sept 2006-Aug 2007, Feb 2016-Dec 2016",

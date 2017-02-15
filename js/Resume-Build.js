@@ -7,7 +7,7 @@ var bio = {
     "github": "https://github.com/Stephanie-Spears",
     "location": "Portland, Oregon"
   },
-  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. -Pele",
+  "welcomeMessage": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.<footer>-Pele</footer>",
   "skills": [
     "C++", "PHP", "Drupal", "HTML/CSS/JavaScript", "Java", "Visual Basic", "Python", "SQL", "C#", "Ruby", "Swift", " ", "Excellent written and verbal communication", "Highly organized and detail-oriented", "Learn and adapt quickly", "Good sense of humor and positive attitude", "Analytical thinking and research ability", "Work effectively as part of a team or independently"
   ],
@@ -187,25 +187,60 @@ displayEducation();
 var work = {
   "jobs": [
     {
+      "employer": "Self-Employed",
+      "title": "Private Instructor",
+      "dates": "April 2012-current",
+      "location": "Umeda, Osaka, Japan",
+      "description": "Private English instructor, assisting clients with various English language-related tasks. Tasks were unique to the client’s needs, and largely depended on the client’s profession. Activities ranged from Japanese-English translation, proofreading and assistance creating or understand articles, essays, scientific or medical studies, conference speeches, legal contracts, and professional correspondences between international colleagues. I continue to work from a distance with several private clients.",
+      "url": ""
+    },
+    {
       "employer": "Kuzuha Language College",
       "title": "English Language Consultant",
       "dates": "Feb 2012-Dec 2015",
-      "location": "Hirakata, Japan",
-      "description": "English Language Consultant on a variety of technical and academnic materials. Editing, proof-reading, translation. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "location": "Kuzuha, Hirakata, Japan",
+      "description": "English Language Consultant on a variety of technical and academnic materials. Editing, proof-reading, translation.",
+      "url": "http://www.klc-inc.com/"
     },
     {
-      "employer": "Self-Employed",
-      "title": "Private Instructor",
-      "dates": "April 2012-Dec 2015",
-      "location": "Osaka, Japan",
-      "description": "I worked as a private English instructor, assisting clients with various English language-related tasks. Tasks were unique to the client’s needs, and largely depended on the client’s profession. Activities ranged from Japanese-English translation, proofreading and helping form or understand articles, essays, scientific or medical studies, conference speeches, legal contracts, and professional correspondences between international colleagues. I continue to work from a distance with several private clients."
+      "employer": "YMCA International",
+      "title": "English Language Teacher",
+      "dates": "June 2014-April 2015",
+      "location": "Nishinomiya, Kobe, Japan",
+      "description": "Part-time dispatch English teacher, traveling to several private elementary schools for weekly lessons, as well as coordinating and hosting special holiday events.",
+      "url": "http://www.oyis.org/index.php/en/"
+    },
+    {
+      "employer": "Kinder Kids International",
+      "title": "English Language Teacher",
+      "dates": "Feb 2012-June 2014",
+      "location": "Nakayama, Kobe, Japan",
+      "description": "Saturday school English instructor, teaching groups of children in an English immersion environment. Activities included language games, vocabulary building, grammar correction, and general speaking/listening development.",
+      "url": "http://www.kinderkids.com/en/"
+    },
+    {
+      "employer": "Blue Dolphin International Preschool",
+      "title": "English Language Teacher",
+      "dates": "Feb 2012-June 2014",
+      "location": "Mikage, Kobe, Japan",
+      "description": "English immersion teacher for preschool-aged children.",
+      "url": "http://www.blue-dolphins.net/"
     },
     {
       "employer": "Scott T. Bailey, Attorney at Law",
       "title": "Research Assistant",
       "dates": "June 2011-Sept 2011",
       "location": "Florence, Oregon",
-      "description": "This was a brief summer-break internship position in which I assisted with researching, organizing, and summarizing medical evidence in support of medical disability claims."
+      "description": "Brief summer-break internship position. Assisted with researching, organizing, and summarizing medical evidence in support of medical disability claims.",
+      "url": "https://www.stblawyer.com/contact"
+    },
+    {
+      "employer": "American English Institute, University of Oregon",
+      "title": "Academnic Tutor",
+      "dates": "Nov 2009-June 2011",
+      "location": "Eugene, Oregon",
+      "description": "Tutor to non-native English speakers at the University of Oregon. Assisted with group learning as well as individual tutoring.",
+      "url": "https://aei.uoregon.edu/"
     }
   ]
 };
@@ -215,16 +250,17 @@ function displayWork() {
     for (var i = 0; i < work.jobs.length; i++) {
       $("#workExperience").append(HTMLworkStart);
       var formattedEmployer=HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+      formattedEmployer=formattedEmployer.replace("#", work.jobs[i].url);
       formattedTitle=HTMLworkTitle.replace("%data%", work.jobs[i].title);
       formattedEmployerTitle= formattedEmployer + formattedTitle;
-      $(".work-entry:last").append(formattedEmployerTitle);
+      // $(".work-entry:last").append(formattedEmployerTitle);
 
       var formattedDates=HTMLworkDates.replace("%data%", work.jobs[i].dates);
-      $(".work-entry:last").append(formattedDates);
+      // $(".work-entry:last").append(formattedDates);
       var formattedLocations=HTMLworkLocation.replace("%data%", work.jobs[i].location);
-      $(".work-entry:last").append(formattedLocations);
+      // $(".work-entry:last").append(formattedLocations);
       var formattedDescription=HTMLworkDescription.replace("%data%", work.jobs[i].description);
-      $(".work-entry:last").append(formattedDescription);
+      $(".work-entry:last").append(formattedEmployerTitle, formattedDates, formattedLocations, formattedDescription);
     }
   }
 }

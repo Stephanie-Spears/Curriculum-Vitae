@@ -12,10 +12,10 @@ _This is a web application for presenting Stephanie Spears' *web development* CV
 * _This website provides Stephanie Spears'..._
   * _contact information_
   * _skills list_
-  * _previous employment information, with easy-to-follow website links for most employers_
+  * _previous employment information, with easy-to-follow links to previous employers' websites_
   * _personal GitHub projects, with brief application descriptions and repository links_
   * _education history_
-  * _an interactive Google Maps link, highlighting previous places of employment_
+  <!-- * _an interactive Google Maps link, highlighting previous places of employment_ -->
 
 ## Setup/Installation Requirements
 
@@ -29,12 +29,6 @@ View this site on GitHub Pages ***[here](https://stephanie-spears.github.io/Curr
 ## Support and contact details
 
 _Please feel free to contact stephanie.spears1@gmail.com for any additional information or assistance._
-
-## Technologies Used
-
-* _JavaScript_
-* _Production.min_
-* _BootStrap_
 
 ### License
 
